@@ -4,13 +4,13 @@ const fs = require("fs");
 const marked = require("marked");
 const app = express();
 
-app.get("/", function(req, res) {
+app.get("/hello", function(req, res) {
     //when we get an http get request to the root/homepage
     res.send("Hello express");
   });
 
 
-  app.get('/docs', function(req, res) {
+  app.get('/', function(req, res) {
     var path = __dirname + '/Readme.md';
     fs.readFile(path, 'utf8', function(err, data) {
       if(err) {
