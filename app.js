@@ -10,7 +10,7 @@ app.get("/", function(req, res) {
   });
 
 
-  app.get('/doc', function(req, res) {
+  app.get('/docs', function(req, res) {
     var path = __dirname + '/markdown/readme.md';
     fs.readFile(path, 'utf8', function(err, data) {
       if(err) {
