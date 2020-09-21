@@ -1,10 +1,16 @@
 const PORT = process.env.PORT || 3000;
 const express = require("express");
 const fs = require("fs");
-const marked = require("marked");
+const marked = require("fs");
 const app = express();
 
-app.get('/', function(req, res) {
+app.get("/", function(req, res) {
+    //when we get an http get request to the root/homepage
+    res.send("Hello express");
+  });
+
+
+  app.get('/doc', function(req, res) {
     var path = __dirname + '/markdown/readme.md';
     fs.readFile(path, 'utf8', function(err, data) {
       if(err) {
@@ -13,7 +19,6 @@ app.get('/', function(req, res) {
       res.send(marked(data.toString()));
     });
 });
-
 
   app.get('/test', function(req, res) {
     var path = __dirname + '/markdown/test.md';
