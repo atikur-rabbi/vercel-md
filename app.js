@@ -11,7 +11,7 @@ app.get("/", function(req, res) {
 
 
   app.get('/docs', function(req, res) {
-    var path = __dirname + '/markdown/test.md';
+    var path = __dirname + '/markdown/test2.md';
     fs.readFile(path, 'utf8', function(err, data) {
       if(err) {
         console.log(err);
