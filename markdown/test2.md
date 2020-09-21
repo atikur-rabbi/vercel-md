@@ -2,7 +2,7 @@
 
 ```javascript
 app.get('/test', function(req, res) {
-  var path = __dirname + '/markdown/test.md';
+  var path = __dirname + '/markdown/test2.md';
   var file = fs.readFileSync(path, 'utf8');
   res.send(marked(file.toString()));
 });
